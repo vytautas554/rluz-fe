@@ -1,0 +1,9 @@
+Home page:
+menu su logo mažu per centrą.
+1. Karuselė su fotkėm ir rluz photography per vidurį.
+2. Apie mane viskas tas pats.
+3. The good stuff - tas pats, sugalvoti pavadinimus. Galimai daryti kelias fotkes žemyn su nukreipimu į galeriją.
+4. review tas pats.
+5. offer tas pats tik fotkė keičiasi ir užrašas
+6. photos ir galerija dar vienas nereikalingas
+7. Footer - nereikia email button
