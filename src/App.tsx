@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom";
-import Main from "./pages/Main";
-import Gallery from "./pages/Gallery";
-import Prices from "./pages/Prices";
-import Blog from "./pages/Blog";
-import About from "./pages/About";
+import { Routes, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import Gallery from './pages/Gallery';
+import Prices from './pages/Prices';
+import Blog from './pages/Blog';
+import About from './pages/About';
 
 function App() {
   return (
