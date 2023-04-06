@@ -3,11 +3,10 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const navItems = [
   { name: 'Pagrindinis', route: '/' },
-  { name: 'Apie mane', route: '/about' },
   { name: 'Galerija', route: '/gallery' },
-  { name: 'Paslaugos', route: '/' },
   { name: 'Kainos', route: '/prices' },
   { name: 'Blogas', route: '/blog' },
+  { name: 'Apie mane', route: '/about' },
 ];
 
 function MainNavigation() {
