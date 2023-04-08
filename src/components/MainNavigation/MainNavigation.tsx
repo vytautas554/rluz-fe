@@ -20,9 +20,9 @@ function MainNavigation() {
                 disableRipple
                 key={item.name}
                 sx={{
-                  pr: 4,
+                  mr: 2,
                   '&:nth-child(3)': {
-                    pr: 28,
+                    mr: 28,
                   },
                   '&:hover': {
                     backgroundColor: 'transparent',
