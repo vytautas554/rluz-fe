@@ -6,9 +6,10 @@ import imageForCarousel2 from '../../images/carousel/2.jpg';
 import imageForCarousel3 from '../../images/carousel/3.jpg';
 import imageForCarousel4 from '../../images/carousel/4.jpg';
 import imageForCarousel5 from '../../images/carousel/5.jpg';
+import { ImageValues } from '../common/interfaces';
 
 function CustomCarousel() {
-  const carouselImages = [
+  const carouselImages: ImageValues[] = [
     {
       url: imageForCarousel1,
       description: '',
