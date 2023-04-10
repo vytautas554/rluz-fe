@@ -7,7 +7,18 @@ function TransitionSection({ url, description, text }: ImageValues) {
     <Box sx={{ position: 'relative', textAlign: 'center' }}>
       <Image src={url} alt={description} height={320} duration={0} />
       {text ? (
-        <Typography sx={{ position: 'absolute', top: '40%', bottom: '50%', right: '40%', left: '40%', color: 'white' }}>
+        <Typography
+          sx={{
+            position: 'absolute',
+            top: '40%',
+            bottom: '50%',
+            right: '42%',
+            left: '42%',
+            color: 'white',
+            textTransform: 'uppercase',
+            fontFamily: 'Marcellus',
+          }}
+        >
           {text}
         </Typography>
       ) : (
