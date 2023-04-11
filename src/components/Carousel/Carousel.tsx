@@ -33,9 +33,16 @@ function CustomCarousel() {
 
   return (
     <Box>
-      <Carousel indicators={false}>
+      <Carousel indicators={false} stopAutoPlayOnHover={false}>
         {carouselImages.map((carouselImage, i) => (
-          <Image key={i} src={carouselImage.url} alt={carouselImage.description} fit="cover" style={{ maxHeight: 600 }} />
+          <Image
+            key={i}
+            src={carouselImage.url}
+            alt={carouselImage.description}
+            fit="cover"
+            style={{ maxHeight: 780 }}
+            duration={0}
+          />
         ))}
       </Carousel>
     </Box>
