@@ -7,7 +7,7 @@ function AboutSection() {
     <Box
       sx={{
         backgroundImage: 'url("//static.showit.co/1600/2KJC7dO0SjyKxVooWWzoJQ/shared/xxroses-textures-cremenoisebckgnd.png")',
-        py: 3,
+        py: 5,
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', mx: 50, justifyContent: 'space-between' }}>
@@ -18,7 +18,6 @@ function AboutSection() {
 
           <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', mr: 13 }}>
             <Typography
-              variant="subtitle1"
               sx={{
                 textAlign: 'justify',
                 fontSize: 14,
