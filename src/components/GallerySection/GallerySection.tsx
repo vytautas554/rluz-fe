@@ -1,5 +1,4 @@
 import { Box, List, ListItem, Link, Typography } from '@mui/material';
-import Image from 'mui-image';
 import weddingPhoto from '../../images/Vestuvių fotosesija.jpg';
 import weddingSecondaryPhoto from '../../images/Justina ir Vilius.2701-Edit-3.jpg';
 import couplePhoto from '../../images/Poros fotosesija.jpg';
@@ -35,7 +34,7 @@ function GallerySection() {
         py: 5,
       }}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', mx: 60, mb: -20 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', mx: 60, mb: 55 }}>
         <Box
           sx={{ pt: 13, position: 'relative' }}
           onMouseEnter={() => onHover(ImageOrder.firstImage)}
@@ -47,11 +46,9 @@ function GallerySection() {
             <Typography
               sx={{
                 position: 'absolute',
-                top: '40%',
-                bottom: '50%',
-                right: '35%',
-                left: '35%',
                 color: 'white',
+                bottom: -50,
+                left: 150,
                 zIndex: 11,
                 fontFamily: 'Marcellus',
                 fontSize: 30,
@@ -62,11 +59,34 @@ function GallerySection() {
           ) : (
             ''
           )}
-          <Image
-            src={isHovered.firstImage ? weddingSecondaryPhoto : weddingPhoto}
-            height={650}
-            style={{ zIndex: 10, maxWidth: 435 }}
-          />
+
+          <Box sx={{ position: 'absolute', zIndex: 10 }}>
+            <img
+              src={weddingPhoto}
+              alt=""
+              style={{
+                width: 435,
+                height: 650,
+                transition: 'opacity 0.5s',
+                opacity: isHovered.firstImage ? 0 : 1,
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+
+          <Box sx={{ position: 'absolute', zIndex: 10 }}>
+            <img
+              src={weddingSecondaryPhoto}
+              alt=""
+              style={{
+                width: 435,
+                height: 650,
+                transition: 'opacity 0.5s',
+                opacity: isHovered.firstImage ? 1 : 0,
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
         </Box>
 
         <Box>
@@ -118,7 +138,7 @@ function GallerySection() {
           <Box
             onMouseEnter={() => onHover(ImageOrder.secondImage)}
             onMouseLeave={() => onHover(ImageOrder.secondImage)}
-            sx={{ position: 'relative' }}
+            sx={{ position: 'relative', mr: 55 }}
             component={RouterLink}
             to="/gallery"
           >
@@ -126,11 +146,9 @@ function GallerySection() {
               <Typography
                 sx={{
                   position: 'absolute',
-                  top: '45%',
-                  bottom: '50%',
-                  right: '35%',
-                  left: '35%',
                   color: 'white',
+                  top: 250,
+                  left: 150,
                   zIndex: 11,
                   fontFamily: 'Marcellus',
                   fontSize: 30,
@@ -142,11 +160,33 @@ function GallerySection() {
               ''
             )}
 
-            <Image
-              src={isHovered.secondImage ? coupleSecondaryPhoto : couplePhoto}
-              height={600}
-              style={{ zIndex: 10, maxWidth: 435 }}
-            />
+            <Box sx={{ position: 'absolute', zIndex: 10 }}>
+              <img
+                src={couplePhoto}
+                alt=""
+                style={{
+                  width: 435,
+                  height: 600,
+                  transition: 'opacity 0.5s',
+                  opacity: isHovered.secondImage ? 0 : 1,
+                  objectFit: 'cover',
+                }}
+              />
+            </Box>
+
+            <Box sx={{ position: 'absolute', zIndex: 10 }}>
+              <img
+                src={coupleSecondaryPhoto}
+                alt=""
+                style={{
+                  width: 435,
+                  height: 600,
+                  transition: 'opacity 0.5s',
+                  opacity: isHovered.secondImage ? 1 : 0,
+                  objectFit: 'cover',
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
