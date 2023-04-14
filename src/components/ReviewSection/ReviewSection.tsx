@@ -4,6 +4,7 @@ import MobileStepper from '@mui/material/MobileStepper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+// Mock data. Reviews should come from DB
 const reviews = [
   {
     person: 'Jonasssssssssss',
@@ -16,7 +17,7 @@ const reviews = [
       'Jaclyn is nothing short of amazing!!! Jaclyn and my boyfriend Ty at the time we’re planning a surprise proposal during our photoshoot. She took the time to talk and plan out the whole shoot with Ty to make it the most perfect moment. She was amazing during the whole shoot and took beautiful photos that we love and will always be able to look back on! Meeting her felt like I knew her for years! I will definitely be using her for more photo shoots! I recommend her and always will!! Thanks Jaclyn for everything you did in making our engagement so special!!! xx',
   },
   {
-    person: 'Kazys',
+    person: 'z',
     review:
       'I cannot recommend Jackie  enough! My husband and I are awkward in front of the camera, but she made us feel entirely comfortable. PLUS she photographed us with our two crazy pups for both the engagement shoot and on our wedding day and somehow managed to get amazing pictures even with them jumping around. Not only is her work incredible, shes so easy to get along with and we genuinely enjoyed spending time with her - so much so that we were sad to see her go when she was finished shooting on our wedding day. She made everything completely stress free and we made the BEST choice to book her as our photographer',
   },
@@ -38,10 +39,10 @@ function ReviewSection() {
     <Box
       sx={{
         backgroundImage: 'url("//static.showit.co/1600/2KJC7dO0SjyKxVooWWzoJQ/shared/xxroses-textures-cremenoisebckgnd.png")',
-        py: 8,
+        pt: 8,
       }}
     >
-      <Box sx={{ mx: 40, position: 'relative' }}>
+      <Box sx={{ mx: 40, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ height: 255, px: 35, width: '100%', textAlign: 'justify', fontFamily: 'Marcellus' }}>
           {reviews[activeStep].review}
         </Box>
@@ -53,9 +54,7 @@ function ReviewSection() {
             <Button
               disableRipple
               sx={{
-                position: 'absolute',
-                left: '85%',
-                top: 5,
+                left: '140%',
                 color: 'black',
                 '&:hover': {
                   backgroundColor: 'transparent',
@@ -73,9 +72,8 @@ function ReviewSection() {
             <Button
               disableRipple
               sx={{
-                position: 'absolute',
-                right: '85%',
-                top: -300,
+                right: '150%',
+                top: -310,
                 color: 'black',
                 '&:hover': {
                   backgroundColor: 'transparent',
@@ -92,18 +90,17 @@ function ReviewSection() {
         ></MobileStepper>
         <Box
           sx={{
-            position: 'absolute',
             background: 'none',
-            right: '50%',
-            top: '70%',
             fontFamily: 'Marcellus',
           }}
         >
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-            <Typography sx={{ width: '1px', backgroundColor: 'black', height: 28 }}></Typography>
-            <Typography sx={{ fontWeight: 500, pt: 1, fontSize: 18, fontFamily: 'Marcellus' }}>
-              - {reviews[activeStep].person}
-            </Typography>
+          <Box sx={{ position: 'relative', bottom: 90 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pb: 0 }}>
+              <Typography sx={{ width: '1px', backgroundColor: 'black', height: 28 }}></Typography>
+              <Typography sx={{ fontWeight: 500, pt: 1, fontSize: 18, fontFamily: 'Marcellus' }}>
+                {reviews[activeStep].person}
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
