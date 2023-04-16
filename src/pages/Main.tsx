@@ -8,6 +8,7 @@ import GallerySection from '../components/GallerySection/GallerySection';
 import ReviewSection from '../components/ReviewSection/ReviewSection';
 import ParallaxSection from '../components/ParallaxSection/ParallaxSection';
 import ParallaxImage from '../images/transitions/Brigita ir Sigitas.3148-Edit.jpg';
+import AnotherGallerySection from '../components/AnotherGallerySection/AnotherGallerySection';
 
 function Main() {
   return (
@@ -25,6 +26,7 @@ function Main() {
       />
       <ReviewSection />
       <ParallaxSection url={ParallaxImage} description="" text="Come to see what I offer" />
+      <AnotherGallerySection />
     </Box>
   );
 }
