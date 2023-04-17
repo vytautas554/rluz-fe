@@ -12,7 +12,7 @@ function AboutSection() {
     >
       <Box sx={{ display: 'flex', alignItems: 'center', mx: 50, justifyContent: 'space-between' }}>
         <Box sx={{ width: '50%' }}>
-          <Typography variant="h3" sx={{ fontFamily: 'Marcellus', pb: 3, ml: 2, textAlign: 'left' }}>
+          <Typography variant="h3" sx={{ pb: 3, ml: 2, textAlign: 'left' }}>
             Hey lovebirds!
           </Typography>
 

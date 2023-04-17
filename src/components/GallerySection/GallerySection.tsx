@@ -50,7 +50,6 @@ function GallerySection() {
                 bottom: -50,
                 left: 150,
                 zIndex: 11,
-                fontFamily: 'Marcellus',
                 fontSize: 30,
               }}
             >
@@ -91,11 +90,11 @@ function GallerySection() {
 
         <Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', mr: 10 }}>
-            <Typography sx={{ textAlign: 'right', fontFamily: 'Marcellus' }} variant="h2">
+            <Typography sx={{ textAlign: 'right' }} variant="h2">
               The <br />
               good <br /> stuff
             </Typography>
-            <List sx={{ fontFamily: 'Marcellus', fontSize: 19 }}>
+            <List sx={{ fontSize: 19 }}>
               <ListItem sx={{ pb: 0 }}>
                 <Link
                   component={RouterLink}
@@ -150,7 +149,6 @@ function GallerySection() {
                   top: 250,
                   left: 150,
                   zIndex: 11,
-                  fontFamily: 'Marcellus',
                   fontSize: 30,
                 }}
               >

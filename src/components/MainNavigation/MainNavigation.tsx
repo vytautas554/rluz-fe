@@ -1,4 +1,5 @@
 import { Link, Button, Toolbar, Box, AppBar } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const navItems = [
@@ -10,9 +11,46 @@ const navItems = [
 ];
 
 function MainNavigation() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 700 ? setIsSticky(true) : setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', stickNavbar);
+    };
+  }, []);
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" color="transparent" sx={{ boxShadow: 'none' }}>
+    <Box
+      sx={{
+        display: 'flex',
+      }}
+    >
+      <AppBar
+        color="transparent"
+        component="nav"
+        sx={{
+          ...(isSticky
+            ? {
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                zIndex: 100,
+                backgroundImage:
+                  'url("https://static.showit.co/1600/l5jyslw-T2C1FGjyzyZKXw/88750/xxroses-textures-tannoisebckgnd.png")',
+                opacity: 0.9,
+              }
+            : { position: 'absolute', backgroundColor: 'transparent', boxShadow: 'none' }),
+        }}
+      >
         <Toolbar sx={{ justifyContent: 'center' }}>
           <Box>
             {navItems.map((item) => (
@@ -30,7 +68,11 @@ function MainNavigation() {
                 }}
               >
                 <Link
-                  sx={{ fontSize: 11, color: '#f3e9e0', backgroundColor: 'transparent' }}
+                  sx={{
+                    fontSize: 11,
+                    color: isSticky ? '#fff' : '#f3e9e0',
+                    backgroundColor: 'transparent',
+                  }}
                   component={RouterLink}
                   to={item.route}
                   underline="none"

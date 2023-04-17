@@ -43,9 +43,7 @@ function ReviewSection() {
       }}
     >
       <Box sx={{ mx: 40, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Box sx={{ height: 255, px: 35, width: '100%', textAlign: 'justify', fontFamily: 'Marcellus' }}>
-          {reviews[activeStep].review}
-        </Box>
+        <Box sx={{ height: 255, px: 35, width: '100%', textAlign: 'justify' }}>{reviews[activeStep].review}</Box>
         <MobileStepper
           sx={{ position: 'relative', background: 'none' }}
           steps={0}
@@ -59,7 +57,6 @@ function ReviewSection() {
                 '&:hover': {
                   backgroundColor: 'transparent',
                 },
-                fontFamily: 'Marcellus',
               }}
               size="small"
               onClick={handleNext}
@@ -78,7 +75,6 @@ function ReviewSection() {
                 '&:hover': {
                   backgroundColor: 'transparent',
                 },
-                fontFamily: 'Marcellus',
               }}
               size="small"
               onClick={handleBack}
@@ -91,15 +87,12 @@ function ReviewSection() {
         <Box
           sx={{
             background: 'none',
-            fontFamily: 'Marcellus',
           }}
         >
           <Box sx={{ position: 'relative', bottom: 90 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pb: 0 }}>
               <Typography sx={{ width: '1px', backgroundColor: 'black', height: 28 }}></Typography>
-              <Typography sx={{ fontWeight: 500, pt: 1, fontSize: 18, fontFamily: 'Marcellus' }}>
-                {reviews[activeStep].person}
-              </Typography>
+              <Typography sx={{ fontWeight: 500, pt: 1, fontSize: 18 }}>{reviews[activeStep].person}</Typography>
             </Box>
           </Box>
         </Box>
