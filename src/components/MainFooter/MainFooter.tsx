@@ -21,7 +21,7 @@ function MainFooter() {
         alignItems: 'center',
         flexDirection: 'column',
         background: '#e0c5aa',
-        padding: '30px 0',
+        padding: '30px',
       }}
     >
       <Box sx={{ width: '100%' }}>
@@ -32,7 +32,7 @@ function MainFooter() {
           <Box
             sx={{ width: '30%', display: 'flex', justifyContent: 'center', borderTop: 1, borderBottom: 1, borderColor: 'white' }}
           >
-            <Box sx={{ width: '10%', display: 'flex', justifyContent: 'space-between', margin: '15px 0' }}>
+            <Box sx={{ width: '10%', display: 'flex', justifyContent: 'space-between', margin: '15px' }}>
               <Link to={FACEBOOK_LINK} target="_blank">
                 <FacebookRoundedIcon sx={{ color: 'white' }} />
               </Link>
@@ -60,7 +60,7 @@ function MainFooter() {
           </Typography>
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', flexDirection: 'column', padding: '15px 0' }}>
+      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', flexDirection: 'column', padding: '15px' }}>
         <Box>
           <Link to={INSTAGRAM_LINK} target="_blank">
             {images.map((image, index) => (
