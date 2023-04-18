@@ -16,7 +16,7 @@ function MainNavigation() {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 700 ? setIsSticky(true) : setIsSticky(false);
+      windowHeight > 900 ? setIsSticky(true) : setIsSticky(false);
     }
   };
 
@@ -46,7 +46,7 @@ function MainNavigation() {
                 zIndex: 100,
                 backgroundImage:
                   'url("https://static.showit.co/1600/l5jyslw-T2C1FGjyzyZKXw/88750/xxroses-textures-tannoisebckgnd.png")',
-                opacity: 0.9,
+                opacity: 0.95,
               }
             : { position: 'absolute', backgroundColor: 'transparent', boxShadow: 'none' }),
         }}

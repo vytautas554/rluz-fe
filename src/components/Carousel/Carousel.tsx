@@ -41,7 +41,7 @@ function CustomCarousel() {
             src={carouselImage.url}
             alt={carouselImage.description}
             fit="cover"
-            style={{ maxHeight: 780 }}
+            style={{ maxHeight: 900 }}
             duration={0}
           />
         ))}
