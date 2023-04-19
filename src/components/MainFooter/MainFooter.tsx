@@ -1,4 +1,3 @@
-// import { Box } from '@mui/system';
 import { Typography, Link, Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../../images/signature-and-logo/permatomas-baltas-auksas.png';
@@ -8,7 +7,6 @@ import Img2 from '../../../src/images/Poros fotosesija.jpg';
 import Img3 from '../../../src/images/Justina ir Vilius.2701-Edit-3.jpg';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
-// import { Link } from 'react-router-dom';
 import { FACEBOOK_LINK, INSTAGRAM_LINK } from '../utils/constant';
 
 const images = [{ src: Img }, { src: Img1 }, { src: Img2 }, { src: Img3 }, { src: Img }, { src: Img2 }];
@@ -44,7 +42,7 @@ function MainFooter() {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ mt: '15px' }}>
+      <Box sx={{ mt: 2 }}>
         <Link component={RouterLink} to={INSTAGRAM_LINK} target="_blank" underline="none" sx={{ color: 'white' }}>
           <Typography
             variant="h5"
