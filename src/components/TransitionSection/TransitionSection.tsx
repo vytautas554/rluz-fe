@@ -14,7 +14,7 @@ function TransitionSection({ url, description, text }: ImageValues) {
             bottom: '50%',
             right: '42%',
             left: '42%',
-            color: 'white',
+            color: '#FAF9F6',
             textTransform: 'uppercase',
           }}
         >

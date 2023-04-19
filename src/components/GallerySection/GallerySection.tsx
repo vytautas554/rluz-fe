@@ -66,7 +66,7 @@ function GallerySection() {
             <Typography
               sx={{
                 position: 'absolute',
-                color: 'white',
+                color: '#FAF9F6',
                 bottom: -50,
                 left: 150,
                 zIndex: 11,
@@ -110,7 +110,7 @@ function GallerySection() {
 
         <Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', mr: 5 }}>
-            <Typography sx={{ textAlign: 'right' }} variant="h2">
+            <Typography sx={{ textAlign: 'right', color: '#28282B' }} variant="h2">
               The <br />
               good <br /> stuff
             </Typography>
@@ -122,7 +122,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/gallery"
                     underline="none"
@@ -134,7 +134,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/gallery"
                     underline="none"
@@ -146,7 +146,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/about"
                     underline="none"
@@ -160,7 +160,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/gallery"
                     underline="none"
@@ -172,7 +172,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/gallery"
                     underline="none"
@@ -184,7 +184,7 @@ function GallerySection() {
                   <Link
                     component={RouterLink}
                     sx={{
-                      color: '#2b2b2b',
+                      color: '#28282B',
                     }}
                     to="/about"
                     underline="none"
@@ -207,7 +207,7 @@ function GallerySection() {
               <Typography
                 sx={{
                   position: 'absolute',
-                  color: 'white',
+                  color: '#FAF9F6',
                   top: 250,
                   left: 150,
                   zIndex: 11,
@@ -262,7 +262,7 @@ function GallerySection() {
             <Typography
               sx={{
                 position: 'absolute',
-                color: 'white',
+                color: '#FAF9F6',
                 bottom: -50,
                 left: 150,
                 zIndex: 11,
@@ -316,7 +316,7 @@ function GallerySection() {
               <Typography
                 sx={{
                   position: 'absolute',
-                  color: 'white',
+                  color: '#FAF9F6',
                   top: 250,
                   left: 150,
                   zIndex: 11,

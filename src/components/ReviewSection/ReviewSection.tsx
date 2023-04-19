@@ -53,7 +53,7 @@ function ReviewSection() {
               disableRipple
               sx={{
                 left: '140%',
-                color: 'black',
+                color: '#28282B',
                 '&:hover': {
                   backgroundColor: 'transparent',
                 },
@@ -71,7 +71,7 @@ function ReviewSection() {
               sx={{
                 right: '150%',
                 top: -310,
-                color: 'black',
+                color: '#28282B',
                 '&:hover': {
                   backgroundColor: 'transparent',
                 },
@@ -91,7 +91,7 @@ function ReviewSection() {
         >
           <Box sx={{ position: 'relative', bottom: 90 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pb: 0 }}>
-              <Typography sx={{ width: '1px', backgroundColor: 'black', height: 28 }}></Typography>
+              <Typography sx={{ width: '1px', backgroundColor: '#28282B', height: 28 }}></Typography>
               <Typography sx={{ fontWeight: 500, pt: 1, fontSize: 18 }}>{reviews[activeStep].person}</Typography>
             </Box>
           </Box>

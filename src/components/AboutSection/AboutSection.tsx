@@ -21,7 +21,7 @@ function AboutSection() {
               sx={{
                 textAlign: 'justify',
                 fontSize: 14,
-                color: '#2b2b2b',
+                color: '#28282B',
                 lineHeight: 1.8,
                 letterSpacing: 0.8,
               }}
@@ -39,10 +39,23 @@ function AboutSection() {
               sx={{
                 pt: 2,
                 letterSpacing: 3.2,
-                color: '#2b2b2b',
-                transition: 'all.5s',
-                '&:hover': {
-                  fontSize: 13,
+                color: '#28282B',
+                position: 'relative',
+                '&:before': {
+                  content: "''",
+                  position: 'absolute',
+                  width: '0',
+                  height: '2px',
+                  bottom: '-3px',
+                  left: '50%',
+                  transform: 'translate(-50%,0%)',
+                  backgroundColor: '#28282B',
+                  visibility: 'hidden',
+                  transition: 'all 0.3s ease-in-out',
+                },
+                '&:hover:before': {
+                  visibility: 'visible',
+                  width: '100%',
                 },
               }}
               to="/about"
@@ -53,7 +66,7 @@ function AboutSection() {
           </Box>
         </Box>
         <Box sx={{ width: '35%' }}>
-          <img src={image} alt="" style={{ maxHeight: 440, borderRadius: 5 }} />
+          <img src={image} alt="" style={{ maxHeight: 440, width: 400, borderRadius: 5 }} />
         </Box>
       </Box>
     </Box>
