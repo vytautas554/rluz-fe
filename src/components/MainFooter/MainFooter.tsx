@@ -1,5 +1,6 @@
-import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
+// import { Box } from '@mui/system';
+import { Typography, Link, Box } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../../images/signature-and-logo/permatomas-baltas-auksas.png';
 import Img from '../../../src/images/Vestuvių fotosesija.jpg';
 import Img1 from '../../../src/images/Nėtumo fotosesija.jpg';
@@ -7,7 +8,7 @@ import Img2 from '../../../src/images/Poros fotosesija.jpg';
 import Img3 from '../../../src/images/Justina ir Vilius.2701-Edit-3.jpg';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { FACEBOOK_LINK, INSTAGRAM_LINK } from '../utils/constant';
 
 const images = [{ src: Img }, { src: Img1 }, { src: Img2 }, { src: Img3 }, { src: Img }, { src: Img2 }];
@@ -21,7 +22,7 @@ function MainFooter() {
         alignItems: 'center',
         flexDirection: 'column',
         background: '#e0c5aa',
-        padding: '30px',
+        py: 4,
       }}
     >
       <Box sx={{ width: '100%' }}>
@@ -32,11 +33,11 @@ function MainFooter() {
           <Box
             sx={{ width: '30%', display: 'flex', justifyContent: 'center', borderTop: 1, borderBottom: 1, borderColor: 'white' }}
           >
-            <Box sx={{ width: '10%', display: 'flex', justifyContent: 'space-between', margin: '15px' }}>
-              <Link to={FACEBOOK_LINK} target="_blank">
+            <Box sx={{ width: '10%', display: 'flex', justifyContent: 'space-between', my: 2 }}>
+              <Link component={RouterLink} to={FACEBOOK_LINK} underline="none" target="_blank">
                 <FacebookRoundedIcon sx={{ color: 'white' }} />
               </Link>
-              <Link to={INSTAGRAM_LINK} target="_blank">
+              <Link component={RouterLink} to={INSTAGRAM_LINK} underline="none" target="_blank">
                 <InstagramIcon sx={{ color: 'white' }} />
               </Link>
             </Box>
@@ -44,11 +45,10 @@ function MainFooter() {
         </Box>
       </Box>
       <Box sx={{ mt: '15px' }}>
-        <Link to={INSTAGRAM_LINK} target="_blank" style={{ color: 'white', textDecoration: 'none' }}>
+        <Link component={RouterLink} to={INSTAGRAM_LINK} target="_blank" underline="none" sx={{ color: 'white' }}>
           <Typography
             variant="h5"
             sx={{
-              fontFamily: 'Marcellus',
               pb: 1,
               textAlign: 'center',
               '&:hover': {
@@ -60,9 +60,9 @@ function MainFooter() {
           </Typography>
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', flexDirection: 'column', padding: '15px' }}>
+      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', flexDirection: 'column', py: 2 }}>
         <Box>
-          <Link to={INSTAGRAM_LINK} target="_blank">
+          <Link component={RouterLink} to={INSTAGRAM_LINK} target="_blank" underline="none">
             {images.map((image, index) => (
               <img
                 style={{ width: 160, height: 160, objectFit: 'cover', marginRight: '3px' }}
