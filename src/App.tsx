@@ -6,6 +6,7 @@ import Blog from './pages/Blog';
 import About from './pages/About';
 import { Box } from '@mui/material';
 import MainNavigation from './components/MainNavigation/MainNavigation';
+import MainFooter from './components/MainFooter/MainFooter';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <MainFooter />
     </Box>
   );
 }
