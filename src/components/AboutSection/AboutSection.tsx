@@ -1,6 +1,7 @@
 import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import image from '../../images/Asmeninė fotosesija.jpg';
+import signature from '../../images/signature-and-logo/parasas-mazesnis.png';
 
 function AboutSection() {
   return (
@@ -65,8 +66,11 @@ function AboutSection() {
             </Link>
           </Box>
         </Box>
-        <Box sx={{ width: '35%' }}>
-          <img src={image} alt="" style={{ maxHeight: 440, width: 400, borderRadius: 5 }} />
+        <Box sx={{ width: '35%', position: 'relative' }}>
+          <Box sx={{ position: 'absolute', top: 330, left: 200, transform: `rotate(10deg)` }}>
+            <img src={signature} alt="" style={{ maxHeight: 250 }} />
+          </Box>
+          <img src={image} alt="" style={{ maxHeight: 440, borderRadius: 5 }} />
         </Box>
       </Box>
     </Box>

@@ -11,7 +11,7 @@ import ParallaxImage from '../images/transitions/Brigita ir Sigitas.3148-Edit.jp
 
 function Main() {
   return (
-    <Box sx={{ fontFamily: 'Vollkorn' }}>
+    <Box sx={{ fontFamily: 'Vollkorn', overflow: 'hidden' }}>
       <CssBaseline />
       <CustomCarousel />
       <AboutSection />

@@ -52,8 +52,20 @@ function GallerySection() {
       sx={{
         backgroundImage: 'url("//static.showit.co/1600/2KJC7dO0SjyKxVooWWzoJQ/shared/xxroses-textures-cremenoisebckgnd.png")',
         py: 5,
+        position: 'relative',
       }}
     >
+      <Box
+        sx={{
+          width: '100%',
+          position: 'absolute',
+          height: 150,
+          transform: `rotate(-5deg)`,
+          top: -55,
+          right: -10,
+          backgroundImage: 'url("//static.showit.co/1600/2KJC7dO0SjyKxVooWWzoJQ/shared/xxroses-textures-cremenoisebckgnd.png")',
+        }}
+      ></Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mx: 60, mb: 45 }}>
         <Box
           sx={{ pt: 13, position: 'relative' }}
@@ -110,7 +122,7 @@ function GallerySection() {
 
         <Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', mr: 5 }}>
-            <Typography sx={{ textAlign: 'right', color: '#28282B' }} variant="h2">
+            <Typography sx={{ textAlign: 'right', color: '#28282B', zIndex: 10 }} variant="h2">
               The <br />
               good <br /> stuff
             </Typography>
