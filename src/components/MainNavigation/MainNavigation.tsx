@@ -1,6 +1,7 @@
 import { Link, Button, Toolbar, Box, AppBar } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import logo from '../../images/signature-and-logo/permatomas-baltas-auksas-2.png';
 
 const navItems = [
   { name: 'Pagrindinis', route: '/' },
@@ -53,23 +54,27 @@ function MainNavigation() {
       >
         <Toolbar sx={{ justifyContent: 'center' }}>
           <Box>
-            {navItems.map((item) => (
+            {navItems.map((item, i) => (
               <Button
                 disableRipple
                 key={item.name}
                 sx={{
                   mr: 2,
-                  '&:nth-of-type(3)': {
-                    mr: 28,
-                  },
                   '&:hover': {
                     backgroundColor: 'transparent',
                   },
                 }}
               >
+                {i === 3 ? (
+                  <Box sx={{ pr: 3, mx: 5 }}>
+                    <img src={logo} alt="" style={{ maxHeight: 80, padding: 0, margin: 0 }} />
+                  </Box>
+                ) : (
+                  ''
+                )}
                 <Link
                   sx={{
-                    fontSize: 11,
+                    fontSize: 12,
                     color: isSticky ? '#fff' : '#f3e9e0',
                     backgroundColor: 'transparent',
                   }}

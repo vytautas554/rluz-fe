@@ -67,10 +67,10 @@ function AboutSection() {
           </Box>
         </Box>
         <Box sx={{ width: '35%', position: 'relative' }}>
-          <Box sx={{ position: 'absolute', top: 330, left: 200, transform: `rotate(10deg)` }}>
+          <Box sx={{ position: 'absolute', top: 310, left: 180, transform: `rotate(10deg)` }}>
             <img src={signature} alt="" style={{ maxHeight: 250 }} />
           </Box>
-          <img src={image} alt="" style={{ maxHeight: 440, borderRadius: 5 }} />
+          <img src={image} alt="" style={{ maxHeight: 440, width: 350, borderRadius: 5 }} />
         </Box>
       </Box>
     </Box>
