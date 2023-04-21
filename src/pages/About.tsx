@@ -1,5 +1,13 @@
+import { Box, CssBaseline } from '@mui/material';
+import AboutMeHeader from '../components/AboutMe/AboutMeHeader';
+
 function About() {
-  return <h1>This is about page</h1>;
+  return (
+    <Box>
+      <CssBaseline />
+      <AboutMeHeader />
+    </Box>
+  );
 }
 
 export default About;
