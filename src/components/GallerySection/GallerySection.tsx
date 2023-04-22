@@ -15,38 +15,29 @@ function GallerySection() {
   const [isHovered, setIsHovered] = useState({ firstImage: false, secondImage: false, thirdImage: false, fourthImage: false });
 
   function onHover(imageOrder: ImageOrder) {
-    if (imageOrder === ImageOrder.firstImage) {
-      if (isHovered.firstImage) {
-        setIsHovered({ ...isHovered, firstImage: false });
-      } else {
-        setIsHovered({ ...isHovered, firstImage: true });
-      }
-    }
-
-    if (imageOrder === ImageOrder.secondImage) {
-      if (isHovered.secondImage) {
-        setIsHovered({ ...isHovered, secondImage: false });
-      } else {
-        setIsHovered({ ...isHovered, secondImage: true });
-      }
-    }
-
-    if (imageOrder === ImageOrder.thirdImage) {
-      if (isHovered.thirdImage) {
-        setIsHovered({ ...isHovered, thirdImage: false });
-      } else {
-        setIsHovered({ ...isHovered, thirdImage: true });
-      }
-    }
-
-    if (imageOrder === ImageOrder.fourthImage) {
-      if (isHovered.fourthImage) {
-        setIsHovered({ ...isHovered, fourthImage: false });
-      } else {
-        setIsHovered({ ...isHovered, fourthImage: true });
-      }
+    switch (imageOrder) {
+      case ImageOrder.firstImage:
+        setIsHovered({ ...isHovered, firstImage: true, thirdImage: false });
+        break;
+      case ImageOrder.secondImage:
+        setIsHovered({ ...isHovered, secondImage: true, fourthImage: false });
+        break;
+      case ImageOrder.thirdImage:
+        setIsHovered({ ...isHovered, thirdImage: true, firstImage: false });
+        break;
+      case ImageOrder.fourthImage:
+        setIsHovered({ ...isHovered, fourthImage: true, secondImage: false });
+        break;
+      default:
+        setIsHovered({ firstImage: false, secondImage: false, thirdImage: false, fourthImage: false });
+        break;
     }
   }
+
+  function onHoverLeave() {
+    setIsHovered({ firstImage: false, secondImage: false, thirdImage: false, fourthImage: false });
+  }
+
   return (
     <Box
       sx={{
@@ -69,8 +60,8 @@ function GallerySection() {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mx: 60, mb: 45 }}>
         <Box
           sx={{ pt: 13, position: 'relative' }}
-          onMouseEnter={() => onHover(ImageOrder.firstImage)}
-          onMouseLeave={() => onHover(ImageOrder.firstImage)}
+          onMouseOver={() => onHover(ImageOrder.firstImage)}
+          onMouseOut={() => onHoverLeave()}
           component={RouterLink}
           to="/gallery"
         >
@@ -209,8 +200,8 @@ function GallerySection() {
           </Box>
 
           <Box
-            onMouseEnter={() => onHover(ImageOrder.secondImage)}
-            onMouseLeave={() => onHover(ImageOrder.secondImage)}
+            onMouseOver={() => onHover(ImageOrder.secondImage)}
+            onMouseOut={() => onHoverLeave()}
             sx={{ position: 'relative', mr: 55 }}
             component={RouterLink}
             to="/gallery"
@@ -265,8 +256,8 @@ function GallerySection() {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mx: 60, mb: 53 }}>
         <Box
           sx={{ pt: 13, position: 'relative' }}
-          onMouseEnter={() => onHover(ImageOrder.thirdImage)}
-          onMouseLeave={() => onHover(ImageOrder.thirdImage)}
+          onMouseOver={() => onHover(ImageOrder.thirdImage)}
+          onMouseOut={() => onHoverLeave()}
           component={RouterLink}
           to="/gallery"
         >
@@ -318,8 +309,8 @@ function GallerySection() {
 
         <Box sx={{ pt: 37 }}>
           <Box
-            onMouseEnter={() => onHover(ImageOrder.fourthImage)}
-            onMouseLeave={() => onHover(ImageOrder.fourthImage)}
+            onMouseOver={() => onHover(ImageOrder.fourthImage)}
+            onMouseOut={() => onHoverLeave()}
             sx={{ position: 'relative', mr: 55 }}
             component={RouterLink}
             to="/gallery"
