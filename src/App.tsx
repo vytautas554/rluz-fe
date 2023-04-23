@@ -5,8 +5,8 @@ import Prices from './pages/Prices';
 import Blog from './pages/Blog';
 import About from './pages/About';
 import { Box } from '@mui/material';
-import MainNavigation from './components/MainNavigation/MainNavigation';
-import MainFooter from './components/MainFooter/MainFooter';
+import MainNavigation from './components/CommonComponents/MainNavigation/MainNavigation';
+import MainFooter from './components/CommonComponents/MainFooter/MainFooter';
 
 function App() {
   return (

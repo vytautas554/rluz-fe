@@ -1,7 +1,7 @@
 import { Link, Button, Toolbar, Box, AppBar } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import logo from '../../images/signature-and-logo/permatomas-baltas-auksas-2.png';
+import logo from '../../../images/signature-and-logo/permatomas-baltas-auksas-2.png';
 
 const navItems = [
   { name: 'Pagrindinis', route: '/' },

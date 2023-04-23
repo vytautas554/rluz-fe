@@ -1,7 +1,7 @@
 import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import image from '../../images/Asmeninė fotosesija.jpg';
-import signature from '../../images/signature-and-logo/parasas-mazesnis.png';
+import image from '../../../images/Asmeninė fotosesija.jpg';
+import signature from '../../../images/signature-and-logo/parasas-mazesnis.png';
 
 function AboutSection() {
   return (
