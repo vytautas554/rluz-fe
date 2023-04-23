@@ -1,9 +1,9 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import headerImg from '../../images/carousel/1.jpg';
 
 export function AboutMeHeader() {
   return (
-    <Box>
+    <Box sx={{ mb: -1 }}>
       <img
         src={headerImg}
         style={{
@@ -12,8 +12,29 @@ export function AboutMeHeader() {
           objectFit: 'cover',
         }}
       />
-      <Box sx={{ position: 'absolute', top: '20%', left: '30%' }}>
-        <h1 style={{ color: 'white' }}>Sveiki, Esu Roma</h1>
+      <Box sx={{ position: 'absolute', top: '15%', left: '10%', maxWidth: '30%', color: '#f3e9e0', textAlign: 'right' }}>
+        <Typography variant="h1" sx={{ fontSize: '40px' }}>
+          - Sveiki, <br />
+          Esu Roma!
+        </Typography>
+        <Box
+          sx={{
+            textTransform: 'uppercase',
+          }}
+        >
+          <Typography variant="h2" sx={{ fontSize: '30px', fontFamily: 'marcellus', letterSpacing: '0.2em', mt: 4 }}>
+            not your average sappy wedding photographer
+          </Typography>
+          <Typography variant="h3" sx={{ fontSize: '26px', fontFamily: 'marcellus', letterSpacing: '0.2em', mt: 2 }}>
+            your new fav sarcastic third wheel
+          </Typography>
+          <Typography variant="h4" sx={{ fontSize: '24px', fontFamily: 'marcellus', letterSpacing: '0.2em', mt: 2 }}>
+            your new fav sarcastic third wheel
+          </Typography>
+          <Typography variant="h5" sx={{ fontSize: '22px', fontFamily: 'marcellus', letterSpacing: '0.2em', mt: 2 }}>
+            can't wait to hang!
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
