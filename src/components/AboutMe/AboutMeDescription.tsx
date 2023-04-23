@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 
-export function AboutMeDescription() {
+function AboutMeDescription() {
   return (
     <Box sx={{ width: '100%', height: 'auto', background: '#f4eadc', p: '40px' }}>
       <Box>

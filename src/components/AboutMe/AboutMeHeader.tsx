@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import headerImg from '../../images/carousel/1.jpg';
 
-export function AboutMeHeader() {
+function AboutMeHeader() {
   return (
     <Box sx={{ mb: -1 }}>
       <img
