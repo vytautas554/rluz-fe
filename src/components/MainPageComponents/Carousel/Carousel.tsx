@@ -1,12 +1,12 @@
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import Image from 'mui-image';
-import imageForCarousel1 from '../../images/carousel/1.jpg';
-import imageForCarousel2 from '../../images/carousel/2.jpg';
-import imageForCarousel3 from '../../images/carousel/3.jpg';
-import imageForCarousel4 from '../../images/carousel/4.jpg';
-import imageForCarousel5 from '../../images/carousel/5.jpg';
-import { ImageValues } from '../common/interfaces';
+import imageForCarousel1 from '../../../images/carousel/1.jpg';
+import imageForCarousel2 from '../../../images/carousel/2.jpg';
+import imageForCarousel3 from '../../../images/carousel/3.jpg';
+import imageForCarousel4 from '../../../images/carousel/4.jpg';
+import imageForCarousel5 from '../../../images/carousel/5.jpg';
+import { ImageValues } from '../../common/interfaces';
 
 function CustomCarousel() {
   const carouselImages: ImageValues[] = [

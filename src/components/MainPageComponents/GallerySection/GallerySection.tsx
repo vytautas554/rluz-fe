@@ -1,15 +1,15 @@
 import { Box, List, ListItem, Link, Typography } from '@mui/material';
-import weddingPhoto from '../../images/Vestuvių fotosesija.jpg';
-import weddingSecondaryPhoto from '../../images/Justina ir Vilius.2701-Edit-3.jpg';
-import couplePhoto from '../../images/Poros fotosesija.jpg';
-import coupleSecondaryPhoto from '../../images/Nėtumo fotosesija.jpg';
-import thirdPhoto from '../../images/Pirmam puslapiui.jpg';
-import thirdSecondaryPhoto from '../../images/Apie mane puslapiui.jpg';
-import fourthPhoto from '../../images/transitions/Brigita ir Sigitas.3148-Edit.jpg';
-import fourthSecondaryPhoto from '../../images/transitions/Rasa ir Rokas.4097-Edit.jpg';
+import weddingPhoto from '../../../images/Vestuvių fotosesija.jpg';
+import weddingSecondaryPhoto from '../../../images/Justina ir Vilius.2701-Edit-3.jpg';
+import couplePhoto from '../../../images/Poros fotosesija.jpg';
+import coupleSecondaryPhoto from '../../../images/Nėtumo fotosesija.jpg';
+import thirdPhoto from '../../../images/Pirmam puslapiui.jpg';
+import thirdSecondaryPhoto from '../../../images/Apie mane puslapiui.jpg';
+import fourthPhoto from '../../../images/transitions/Brigita ir Sigitas.3148-Edit.jpg';
+import fourthSecondaryPhoto from '../../../images/transitions/Rasa ir Rokas.4097-Edit.jpg';
 import { Link as RouterLink } from 'react-router-dom';
 import { useState } from 'react';
-import { ImageOrder } from '../common/enums';
+import { ImageOrder } from '../../common/enums';
 
 function GallerySection() {
   const [isHovered, setIsHovered] = useState({ firstImage: false, secondImage: false, thirdImage: false, fourthImage: false });

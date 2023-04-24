@@ -1,5 +1,5 @@
 import { Link, Box, Typography } from '@mui/material';
-import { ImageValues } from '../common/interfaces';
+import { ImageValues } from '../../common/interfaces';
 import { Link as RouterLink } from 'react-router-dom';
 
 export function ParallaxSection({ url, description, text }: ImageValues) {

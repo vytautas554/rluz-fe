@@ -1,5 +1,5 @@
 import Image from 'mui-image';
-import { ImageValues } from '../common/interfaces';
+import { ImageValues } from '../../common/interfaces';
 import { Box, Typography } from '@mui/material';
 
 function TransitionSection({ url, description, text }: ImageValues) {

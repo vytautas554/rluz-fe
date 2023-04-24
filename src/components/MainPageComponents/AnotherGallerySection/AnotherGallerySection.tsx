@@ -1,7 +1,7 @@
 import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import leftImage from '../../images/Apie mane puslapiui.jpg';
-import rightImage from '../../images/Asmeninė fotosesija.jpg';
+import leftImage from '../../../images/Apie mane puslapiui.jpg';
+import rightImage from '../../../images/Asmeninė fotosesija.jpg';
 
 export function AnotherGallerySection() {
   return (

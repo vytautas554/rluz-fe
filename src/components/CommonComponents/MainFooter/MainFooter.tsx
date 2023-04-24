@@ -1,13 +1,13 @@
 import { Typography, Link, Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import Logo from '../../images/signature-and-logo/permatomas-baltas-auksas.png';
-import Img from '../../../src/images/Vestuvių fotosesija.jpg';
-import Img1 from '../../../src/images/Nėtumo fotosesija.jpg';
-import Img2 from '../../../src/images/Poros fotosesija.jpg';
-import Img3 from '../../../src/images/Justina ir Vilius.2701-Edit-3.jpg';
+import Logo from '../../../images/signature-and-logo/permatomas-baltas-auksas.png';
+import Img from '../../../images/Vestuvių fotosesija.jpg';
+import Img1 from '../../../images/Nėtumo fotosesija.jpg';
+import Img2 from '../../../images/Poros fotosesija.jpg';
+import Img3 from '../../../images/Justina ir Vilius.2701-Edit-3.jpg';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { FACEBOOK_LINK, INSTAGRAM_LINK } from '../utils/constant';
+import { FACEBOOK_LINK, INSTAGRAM_LINK } from '../../utils/constant';
 
 const images = [{ src: Img }, { src: Img1 }, { src: Img2 }, { src: Img3 }, { src: Img }, { src: Img2 }];
 
@@ -67,7 +67,7 @@ function MainFooter() {
                 style={{ width: 160, height: 160, objectFit: 'cover', marginRight: '3px' }}
                 key={index}
                 src={image.src}
-                alt={`Image ${index}`}
+                alt=""
               />
             ))}
           </Link>
