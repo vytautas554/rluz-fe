@@ -16,13 +16,13 @@ export function ParallaxSection({ url, description, text }: ImageValues) {
         }}
         title={description}
       >
-        <Typography sx={{ fontSize: 26, fontFamily: 'Marcellus', textAlign: 'center', textTransform: 'uppercase', pt: 25 }}>
+        <Typography sx={{ fontSize: 26, textAlign: 'center', textTransform: 'uppercase', pt: 25 }}>
           <Link
             sx={{
-              color: 'white',
+              color: '#FAF9F6',
               transition: 'color 0.4s',
               '&:hover': {
-                color: 'black',
+                color: '#28282B',
               },
             }}
             component={RouterLink}

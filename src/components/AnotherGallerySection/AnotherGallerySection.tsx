@@ -19,10 +19,10 @@ export function AnotherGallerySection() {
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <img style={{ borderRadius: '100%', height: 300, marginTop: 65 }} src={leftImage} alt="" />
           <Box sx={{ textAlign: 'center', pt: 7, mx: 15 }}>
-            <Typography sx={{ textTransform: 'uppercase', color: 'black', fontSize: 45 }}>
+            <Typography sx={{ textTransform: 'uppercase', color: '#28282B', fontSize: 45 }}>
               Photos that make you feel that feeling
             </Typography>
-            <Typography sx={{ color: 'black', pt: 3, fontSize: 20 }}>let's preserve your nostalgia</Typography>
+            <Typography sx={{ color: '#28282B', pt: 3, fontSize: 20 }}>let's preserve your nostalgia</Typography>
           </Box>
           <img style={{ borderRadius: '100%', height: 300 }} src={rightImage} alt="" />
         </Box>
@@ -30,15 +30,15 @@ export function AnotherGallerySection() {
       <hr />
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box>
-          <Link sx={{ color: 'black', fontSize: 25 }} underline="none" component={RouterLink} to={'/gallery'}>
+          <Link sx={{ color: '#28282B', fontSize: 25 }} underline="none" component={RouterLink} to={'/gallery'}>
             take a look at the galleries
           </Link>
         </Box>
         <Box>
-          <Link sx={{ color: 'black', pr: 7, fontSize: 20 }} underline="none" component={RouterLink} to={'/gallery'}>
+          <Link sx={{ color: '#28282B', pr: 7, fontSize: 20 }} underline="none" component={RouterLink} to={'/gallery'}>
             [ couples ]
           </Link>
-          <Link sx={{ color: 'black', fontSize: 20 }} underline="none" component={RouterLink} to={'/gallery'}>
+          <Link sx={{ color: '#28282B', fontSize: 20 }} underline="none" component={RouterLink} to={'/gallery'}>
             [ weddings ]
           </Link>
         </Box>

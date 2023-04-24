@@ -1,6 +1,7 @@
 import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import image from '../../images/Asmeninė fotosesija.jpg';
+import signature from '../../images/signature-and-logo/parasas-mazesnis.png';
 
 function AboutSection() {
   return (
@@ -12,7 +13,7 @@ function AboutSection() {
     >
       <Box sx={{ display: 'flex', alignItems: 'center', mx: 50, justifyContent: 'space-between' }}>
         <Box sx={{ width: '50%' }}>
-          <Typography variant="h3" sx={{ fontFamily: 'Marcellus', pb: 3, ml: 2, textAlign: 'left' }}>
+          <Typography variant="h3" sx={{ pb: 3, ml: 2, textAlign: 'left' }}>
             Hey lovebirds!
           </Typography>
 
@@ -21,7 +22,7 @@ function AboutSection() {
               sx={{
                 textAlign: 'justify',
                 fontSize: 14,
-                color: '#2b2b2b',
+                color: '#28282B',
                 lineHeight: 1.8,
                 letterSpacing: 0.8,
               }}
@@ -39,10 +40,23 @@ function AboutSection() {
               sx={{
                 pt: 2,
                 letterSpacing: 3.2,
-                color: '#2b2b2b',
-                transition: 'all.5s',
-                '&:hover': {
-                  fontSize: 13,
+                color: '#28282B',
+                position: 'relative',
+                '&:before': {
+                  content: "''",
+                  position: 'absolute',
+                  width: '0',
+                  height: '2px',
+                  bottom: '-3px',
+                  left: '50%',
+                  transform: 'translate(-50%,0%)',
+                  backgroundColor: '#28282B',
+                  visibility: 'hidden',
+                  transition: 'all 0.3s ease-in-out',
+                },
+                '&:hover:before': {
+                  visibility: 'visible',
+                  width: '100%',
                 },
               }}
               to="/about"
@@ -52,8 +66,11 @@ function AboutSection() {
             </Link>
           </Box>
         </Box>
-        <Box sx={{ width: '35%' }}>
-          <img src={image} alt="" style={{ maxHeight: 440, borderRadius: 5 }} />
+        <Box sx={{ width: '35%', position: 'relative' }}>
+          <Box sx={{ position: 'absolute', top: 310, left: 180, transform: `rotate(10deg)` }}>
+            <img src={signature} alt="" style={{ maxHeight: 250 }} />
+          </Box>
+          <img src={image} alt="" style={{ maxHeight: 440, width: 350, borderRadius: 5 }} />
         </Box>
       </Box>
     </Box>
