@@ -9,6 +9,7 @@ const navItems = [
   { name: 'Kainos', route: '/prices' },
   { name: 'Blogas', route: '/blog' },
   { name: 'Apie mane', route: '/about' },
+  { name: 'DUK', route: '/faq' },
 ];
 
 function MainNavigation() {
