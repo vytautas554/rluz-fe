@@ -6,45 +6,44 @@ function FaqHeroSection() {
     <Box
       sx={{
         backgroundImage: 'url("//static.showit.co/1600/v9OqC4jDR9aly1PHx06AIQ/88750/xxroses-textures-tannoisebckgnd_1.png")',
-        position: 'relative',
         height: 550,
+        pt: 10,
       }}
     >
-      <Box
-        sx={{
-          color: 'white',
-          fontSize: 25,
-          letterSpacing: 1.5,
-          position: 'absolute',
-          left: 370,
-          top: 240,
-        }}
-      >
-        LET'S MAKE SOME
-        <br /> magic
+      <Box sx={{ display: 'flex', alignItems: 'center', ml: 54, mr: 20, justifyContent: 'space-between' }}>
+        <Box
+          sx={{
+            color: 'white',
+            fontSize: 25,
+            letterSpacing: 1.5,
+            textAlign: 'right',
+          }}
+        >
+          LET'S MAKE SOME
+          <br /> magic
+        </Box>
+        <Box sx={{ mb: 10 }}>
+          <img
+            alt=""
+            src={headerImg}
+            style={{
+              top: 70,
+              height: 420,
+              width: 350,
+            }}
+          />
+        </Box>
+        <Box>
+          <img
+            alt=""
+            src={headerImg}
+            style={{
+              height: 400,
+              width: 650,
+            }}
+          />
+        </Box>
       </Box>
-      <img
-        alt=""
-        src={headerImg}
-        style={{
-          position: 'absolute',
-          height: 400,
-          width: 650,
-          right: 180,
-          top: 120,
-        }}
-      />
-      <img
-        alt=""
-        src={headerImg}
-        style={{
-          position: 'absolute',
-          top: 70,
-          height: 400,
-          width: 350,
-          left: 680,
-        }}
-      />
     </Box>
   );
 }
