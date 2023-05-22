@@ -1,6 +1,6 @@
 import { Box, CssBaseline } from '@mui/material';
-import AboutMeHeader from '../components/AboutMe/AboutMeHeader';
-import AboutMeDescription from '../components/AboutMe/AboutMeDescription';
+import AboutMeHeader from '../components/AboutMeComponents/AboutMeHeader/AboutMeHeader';
+import AboutMeDescription from '../components/AboutMeComponents/AboutMeDescription/AboutMeDescription';
 
 function About() {
   return (

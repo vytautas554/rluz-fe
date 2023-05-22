@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import headerImg from '../../images/carousel/1.jpg';
+import headerImg from '../../../images/carousel/1.jpg';
 
 function AboutMeHeader() {
   return (
