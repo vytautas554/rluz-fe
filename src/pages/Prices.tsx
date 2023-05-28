@@ -1,5 +1,13 @@
+import { Box, CssBaseline } from '@mui/material';
+import PricesCardComponent from '../components/PricesComponents/PricesCardComponent/PricesCardComponent';
+
 function Prices() {
-  return <h1>This is prices page</h1>;
+  return (
+    <Box>
+      <CssBaseline />
+      <PricesCardComponent />;
+    </Box>
+  );
 }
 
 export default Prices;
