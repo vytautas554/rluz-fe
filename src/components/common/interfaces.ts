@@ -3,3 +3,9 @@ export interface ImageValues {
   description: string;
   text?: string;
 }
+export interface GalleryCardData {
+  src: string;
+  imgTitle: string;
+  photoShootType: string;
+  photoShootParticipants: string;
+}

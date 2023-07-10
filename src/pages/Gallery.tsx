@@ -1,5 +1,13 @@
+import { Box, CssBaseline } from '@mui/material';
+import MainGallerySection from '../components/MainGalleryComponents/MainGallerySection/MainGallerySection';
+
 function Gallery() {
-  return <h1>This is gallery page</h1>;
+  return (
+    <Box>
+      <CssBaseline />
+      <MainGallerySection />
+    </Box>
+  );
 }
 
 export default Gallery;
