@@ -3,3 +3,10 @@ export interface ImageValues {
   description: string;
   text?: string;
 }
+
+export interface QuiltedImageData {
+  img: string;
+  title: string;
+  rows?: number;
+  cols?: number;
+}
