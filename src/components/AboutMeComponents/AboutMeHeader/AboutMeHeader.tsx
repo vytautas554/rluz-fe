@@ -11,6 +11,7 @@ function AboutMeHeader() {
           height: '700px',
           objectFit: 'cover',
         }}
+        alt=""
       />
       <Box sx={{ position: 'absolute', top: '15%', left: '10%', maxWidth: '30%', color: '#f3e9e0', textAlign: 'right' }}>
         <Typography variant="h1" sx={{ fontSize: '40px' }}>
