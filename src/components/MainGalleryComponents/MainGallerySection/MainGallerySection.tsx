@@ -1,10 +1,9 @@
-import { Box, CardMedia, CardContent, Typography, Slide } from '@mui/material';
+import { Box, CardMedia, CardContent, Typography, Slide, Button } from '@mui/material';
 import { useState } from 'react';
 import cardHeaderImg from '../../../images/Asmeninė fotosesija.jpg';
 import cardHeaderImg1 from '../../../images/Nėtumo fotosesija.jpg';
 import cardHeaderImg2 from '../../../images/Poros fotosesija.jpg';
 import { GalleryCardData } from '../../common/interfaces';
-import MainGalleryFilterSection from '../MainGalleryFilterSection/MainGalleryFilterSection';
 
 const galleryCardData: GalleryCardData[] = [
   {
@@ -67,7 +66,6 @@ function MainGallerySection() {
 
   const handleFilterChange = (photoShootType: string) => {
     setSelectedFilter(photoShootType);
-    setSlide(!slide);
 
     if (photoShootType === '' || photoShootType === 'visos') {
       setFilteredGalleryCardData(galleryCardData);
@@ -77,14 +75,30 @@ function MainGallerySection() {
     }
   };
 
+  const uniquePhotoShootTypes = galleryCardData
+    .map((data: GalleryCardData) => data.photoShootType)
+    .filter((value: string, index: number, array: string[]) => array.indexOf(value) === index);
+
+  const handleChange = (photoShootType: string) => {
+    handleFilterChange(photoShootType);
+  };
+
   return (
     <Box>
-      <MainGalleryFilterSection
-        key={'a'}
-        galleryCardData={galleryCardData}
-        onSelectFilter={handleFilterChange}
-        onSlideToggle={() => setSlide(!slide)}
-      />
+      <Box sx={{ mt: 20, display: 'flex', justifyContent: 'center' }}>
+        <Button sx={{ px: 3, color: 'black', fontFamily: 'marcellus', fontSize: 17 }} onClick={() => handleChange('visos')}>
+          Visos
+        </Button>
+        {uniquePhotoShootTypes.map((photoShootType: string, index: number) => (
+          <Button
+            sx={{ px: 3, color: 'black', fontFamily: 'marcellus', fontSize: 17 }}
+            key={index}
+            onClick={() => handleChange(photoShootType)}
+          >
+            {photoShootType}
+          </Button>
+        ))}
+      </Box>
       <Slide direction="up" in={slide} {...{ timeout: 700 }}>
         <Box
           sx={{
