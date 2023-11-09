@@ -45,27 +45,28 @@ export default function PricesCardComponent() {
         >
           <Box
             sx={{
-              mx: 40,
               display: 'flex',
               borderRadius: 0,
               py: 5,
             }}
           >
-            <Box sx={{ px: 5, width: 250, textAlign: 'right' }}>
+            <Box sx={{ px: 5, width: '25%', textAlign: 'right' }}>
               <Typography gutterBottom variant="h5" component="div">
                 {card.type} <br /> {card.typeTime}
               </Typography>
             </Box>
-            <img style={{ width: 300 }} src={card.img} alt="" />
-            <Box sx={{ width: 700, pl: 5 }}>
+            <Box sx={{ width: '20%' }}>
+              <img style={{ width: '100%', height: 'auto' }} src={card.img} alt="" />
+            </Box>
+            <Box sx={{ width: '50%', pl: 5 }}>
               <CardContent>
-                <Typography gutterBottom variant="h3" component="div">
+                <Typography sx={{ fontSize: '3vw' }} gutterBottom variant="h3" component="div">
                   {card.price}
                 </Typography>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography sx={{ fontSize: '2vw' }} gutterBottom variant="h5" component="div">
                   DAŽNIAUSIAI: <br /> {card.time}
                 </Typography>
-                <List>
+                <List sx={{ fontSize: '1vw' }}>
                   {card.details.map((detail) => (
                     <ListItem sx={{ p: 0, fontSize: 20 }}>– {detail}</ListItem>
                   ))}
