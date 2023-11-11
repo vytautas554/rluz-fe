@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Link,
-  Button,
-  Toolbar,
-  Box,
-  AppBar,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  IconButton,
-  useMediaQuery,
-} from '@mui/material';
+import { Link, Button, Toolbar, Box, AppBar, Drawer, List, ListItem, IconButton, useMediaQuery } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-import logo from '../../../images/signature-and-logo/permatomas-baltas-auksas-2.png';
+import colorlessLogo from '../../../images/signature-and-logo/permatomas-baltas-auksas-2.png';
+import logo from '../../../images/signature-and-logo/permatomas-baltas-auksas.png';
 
 const navItems = [
   { name: 'Pagrindinis', route: '/' },
@@ -29,7 +18,7 @@ const navItems = [
 
 function MainNavigation() {
   const [isSticky, setIsSticky] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const isSmallScreen = useMediaQuery('(max-width:900px)');
 
   const stickNavbar = () => {
@@ -85,7 +74,7 @@ function MainNavigation() {
                 >
                   {i === 3 ? (
                     <Box sx={{ pr: 3, mx: 5 }}>
-                      <img src={logo} alt="" style={{ maxHeight: 80, padding: 0, margin: 0 }} />
+                      <img src={colorlessLogo} alt="" style={{ maxHeight: 80, padding: 0, margin: 0 }} />
                     </Box>
                   ) : (
                     ''
@@ -106,7 +95,7 @@ function MainNavigation() {
               ))}
           </Box>
           {isSmallScreen && (
-            <IconButton onClick={() => setIsDrawerOpen(true)}>
+            <IconButton onClick={() => setIsSideNavOpen(true)}>
               <MenuIcon />
             </IconButton>
           )}
@@ -117,21 +106,29 @@ function MainNavigation() {
           sx: { width: '90%', background: '#e0c5aa' },
         }}
         anchor="left"
-        open={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
+        open={isSideNavOpen}
+        onClose={() => setIsSideNavOpen(false)}
       >
         <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1 }}>
-          <Box sx={{}}>
+          <Box>
             <img src={logo} alt="" style={{ maxHeight: 80 }} />
           </Box>
-          <IconButton onClick={() => setIsDrawerOpen(false)}>
+          <IconButton onClick={() => setIsSideNavOpen(false)}>
             <CloseIcon />
           </IconButton>
         </Box>
         <List>
           {navItems.map((item) => (
-            <ListItem sx={{ color: '#fff', fontSize: 14 }} key={item.name} component={RouterLink} to={item.route}>
-              <ListItemText primary={item.name} />
+            <ListItem key={item.name} component={RouterLink} to={item.route}>
+              <Link
+                onClick={() => setIsSideNavOpen(false)}
+                sx={{ color: '#fff', fontSize: 16 }}
+                component={RouterLink}
+                to={item.route}
+                underline="none"
+              >
+                {item.name}
+              </Link>
             </ListItem>
           ))}
         </List>

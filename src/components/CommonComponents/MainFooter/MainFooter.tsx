@@ -31,7 +31,7 @@ function MainFooter() {
           <Box
             sx={{ width: '30%', display: 'flex', justifyContent: 'center', borderTop: 1, borderBottom: 1, borderColor: 'white' }}
           >
-            <Box sx={{ width: '10%', display: 'flex', justifyContent: 'space-between', my: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', my: 2 }}>
               <Link component={RouterLink} to={FACEBOOK_LINK} underline="none" target="_blank">
                 <FacebookRoundedIcon sx={{ color: 'white' }} />
               </Link>
