@@ -1,0 +1,117 @@
+.about-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .about-section-description-container {
+    width: 50%;
+  }
+
+  .title {
+    padding: 0 0 30px 30px;
+    text-align: left;
+  }
+
+  .description-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 60px;
+
+    .description {
+      text-align: 'justify';
+      font-size: 14;
+      color: '#28282B';
+      line-height: 1.8;
+      letter-spacing: 0.8;
+    }
+
+    .about-cta {
+      padding-top: 30px;
+      letter-spacing: 3.2px;
+      color: #28282b;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: #28282b;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover:before {
+        visibility: visible;
+        width: 100%;
+      }
+    }
+
+    .about-cta:before .about-cta:hover::before {
+      visibility: 'visible';
+      width: '100%';
+    }
+  }
+
+  .image-container {
+    width: 35%;
+    position: relative;
+
+    .signature {
+      position: absolute;
+      top: 310px;
+      left: 180px;
+      transform: rotate(10deg);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-section-container {
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .description-container {
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-section-container {
+    .about-section-description-container {
+      width: 80%;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    position: '';
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section-container {
+    .image-container {
+      .signature {
+        left: auto;
+        transform: rotate(10deg);
+      }
+    }
+  }
+}

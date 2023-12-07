@@ -38,7 +38,7 @@ function ReviewSection() {
   return (
     <Box
       sx={{
-        backgroundImage: 'url("//static.showit.co/1600/2KJC7dO0SjyKxVooWWzoJQ/shared/xxroses-textures-cremenoisebckgnd.png")',
+        background: '#f4eadc',
         pt: 8,
       }}
     >

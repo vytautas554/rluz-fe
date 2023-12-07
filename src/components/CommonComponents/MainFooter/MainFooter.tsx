@@ -16,7 +16,6 @@ function MainFooter() {
     <Box
       sx={{
         display: 'flex',
-        width: '100%',
         alignItems: 'center',
         flexDirection: 'column',
         background: '#e0c5aa',
@@ -59,19 +58,12 @@ function MainFooter() {
           </Typography>
         </Link>
       </Box>
-      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', flexDirection: 'column', py: 2 }}>
-        <Box>
-          <Link component={RouterLink} to={INSTAGRAM_LINK} target="_blank" underline="none">
-            {images.map((image, index) => (
-              <img
-                style={{ width: 160, height: 160, objectFit: 'cover', marginRight: '3px' }}
-                key={index}
-                src={image.src}
-                alt=""
-              />
-            ))}
-          </Link>
-        </Box>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', py: 2 }}>
+        <Link component={RouterLink} to={INSTAGRAM_LINK} target="_blank" underline="none">
+          {images.map((image, index) => (
+            <img style={{ width: 160, height: 160, objectFit: 'cover', marginRight: '3px' }} key={index} src={image.src} alt="" />
+          ))}
+        </Link>
       </Box>
       <Box sx={{ borderBottom: 1, borderColor: 'white', width: '40%' }}></Box>
     </Box>

@@ -15,15 +15,15 @@ function Main() {
       <CssBaseline />
       <CustomCarousel />
       <AboutSection />
-      <TransitionSection url={transitionImage1} description="" />
-      <GallerySection />
+      {/* <TransitionSection url={transitionImage1} description="" /> */}
+      {/* <GallerySection /> */}
       <TransitionSection
         url={transitionImage2}
         description=""
         text="making your once in a lifetime day last forever
 "
       />
-      <ReviewSection />
+      {/* <ReviewSection /> */}
       <ParallaxSection url={ParallaxImage} description="" text="Come to see what I offer" />
     </Box>
   );
